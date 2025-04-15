@@ -1,0 +1,9 @@
+.close-button img{
+    height: 2rem;
+    width: 2rem;
+}
+
+#game-area{
+    display: none !important;
+}
+
