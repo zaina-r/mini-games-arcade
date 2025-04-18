@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="2048.js"></script>
+</head>
+<style>
+    body{
+        background-color: #faf8ef;
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1{
+        font-size: 80px;
+        line-height: 0.7;
+        color: #776e65;
+        margin: 0;
+    }
+
+    .container{
+        width: 468px;
+        margin-top: 30px;
+    }
+
+    .info{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .grid{
+        height: 456px;
+        width: 456px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #bbada0;
+        border: 7ps solid #bbada0;
+        border-radius: 6px;
+        margin-top: 20px;
+        padding: 7px;
+    }
+
+    .grid div{
+        height: 100px;
+        width: 100px;
+        margin: 7px;
+        border-radius: 3px;
+        color: #afa192;
+        background-color: #eee4da;
+        font-weight: bold;
+        text-align: center;
+        font-size: 60px;
+        line-height: 1.6;
+    }
+
+    .score-container{
+        text-align: center;
+        width: 70px;
+        height: 60px;
+        border-radius: 3px;
+        background-color: #8f7a66;
+        color: white;
+    }
+
+    #score{
+        font-size: 30px;
+    }
+
+    .score-title{
+        font-size: 16px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>2048</h1>
+            <div class="score-container">
+                <h2 class="score-title">Score <span id="score">0</span></h2>
+            </div>
+        </div>
+        <p id="result">Join the numbers to get the 2048 tile</p>
+        <div class="grid"></div>
+    </div>
+</body>
+</html>
