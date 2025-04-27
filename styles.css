@@ -1,9 +1,127 @@
-.close-button img{
-    height: 2rem;
-    width: 2rem;
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#game-area{
-    display: none !important;
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5; /* Light, neutral background */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+    padding: 20px;
 }
 
+/* Main Heading */
+.main-title {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2c3e50; /* Deep charcoal for a sophisticated look */
+    padding: 1.5rem 3rem;
+    background-color: #ffffff; /* White background for clarity */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-title:hover {
+    transform: translateY(-4px); /* Subtle lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Game Card Section */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.game-card {
+    background-color: #ffffff; /* Clean white background */
+    border: 1px solid #ddd; /* Light border for subtle definition */
+    border-radius: 15px; 
+    padding: 2rem;
+    width: 280px; /* Fixed width to maintain uniformity */
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.game-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
+
+.game-card h2 {
+    font-size: 1.6rem;
+    color: #34495e; /* Muted dark blue for the title */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.game-card p {
+    font-size: 1rem;
+    color: #7f8c8d; /* Subtle gray for description */
+    margin-bottom: 1.5rem;
+}
+
+.game-card button.play {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    background-color: #2ecc71; /* Fresh green button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.game-card button.play:hover {
+    background-color: #27ae60; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lifting effect */
+}
+
+/* Button Styling (General) */
+button {
+    padding: 12px 24px;
+    background-color: #3498db; /* Soft blue for a professional feel */
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+        padding: 1.2rem 2.5rem;
+    }
+
+    .main-menu {
+        gap: 1.5rem;
+    }
+
+    .game-card {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 1rem;
+    }
+}
