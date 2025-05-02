@@ -4,7 +4,7 @@ const snakeBody = [{ x: 11, y: 11 }]; //represents each segment's position on th
 const gameBoard = document.getElementById("game-board");
 let inputDirection = { x: 0, y: 0 }; //the direction that the snake should move - determined b arrow keys
 let lastInputDirection = { x: 0, y: 0 }; //get the values of the last arrow keys that was pressed
-const EXPANSION_RATE = 3; //determines by what value the snake will grow when it eats the food
+const EXPANSION_RATE = 1; //determines by what value the snake will grow when it eats the food
 let newSegments = 0; //how many new segments are waiting to be added to the snake
 const GRID_SIZE = 21;
 let food = getRandomFoodPosition(); //determines where the food apears in the game board
@@ -149,6 +149,10 @@ function update() {
     for (let i = snakeBody.length - 2; i >= 0; i--) {
         //loops through each segement of the snake body except the last piece since that position will be vacant once the segments move one block - hence the -2
         snakeBody[i + 1] = { ...snakeBody[i] };
+    }
+
+    if (snakeBody.length % 5 == 0) {
+        SNAKE_SPEED + -1;
     }
 
     lastInputDirection = inputDirection;
